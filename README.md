@@ -3,13 +3,13 @@ This script validates the message structure of the commit command.
 
  - The line: **msg="$(cat $1 | grep -v \# | head -n 1)"** takes the
    message passed though the argument -m or by the interactive editor
-   (vim, nano, etc) and takes the first not comment line (excludes the
+   (vim, nano, etc) and procces the first not comment line (excludes the
    The lines with the # symbol.
 
- - In the line: **if ! [[ \$msg =~ ^(feat|fix|docs?|style|refactor|pref|chore|revert?)\(.+\):{1}\ ?.{3,}$ ]]; then** Validate the message structure.
+ - In the line: **if ! [[ \$msg =~ ^(feat|fix|docs?|style|refactor|pref|chore|revert?)\(.+\):{1}\ ?.{3,}$ ]]; then** Validates the message structure.
 
 # Instructions
-Write the following code into a file named *commit-msg* and place it into: /repo/path/.git/hooks/
+Write the following code into a file named *commit-msg* and save it into: /repo/path/.git/hooks/
 
     #!/bin/sh
 
