@@ -2,3 +2,4 @@ hosts=localhost
 database=db_dev
 user=abc
 password=6tgfv
+docs(users): este es un commit que sí es válido
