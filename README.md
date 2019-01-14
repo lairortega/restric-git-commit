@@ -22,7 +22,7 @@ Write the following code into a file named *commit-msg* and save it into: /repo/
     NORMAL='\e[0m'
 
     msg="$(cat $1 | grep -v \# | head -n 1)"
-    if ! [[ $msg =~ ^(feat|fix|docs?|style|refactor|pref|chore|revert?)\(.+\):{1}\ ?.{3,}$ ]]; the
+    if ! [[ $msg =~ ^(feat|fix|docs?|style|refactor|pref|chore|revert?)\(.+\):{1}\ ?.{3,}$ ]]; then
 		echo -e "${RED}${BOLD}Invalid commit${NORMAL}${NC}"
 		echo -e "\t${YELLOW}Follow the structure: \"type(module): description, at lease 3 words\""
 		echo -e "\tAvailable types:"
